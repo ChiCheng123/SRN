@@ -32,7 +32,8 @@ For more details, please refer to our [paper](https://arxiv.org/abs/1809.02693).
 
 2. Compile extensions.
   ```Shell
-  cd extensions & ./build_ext.sh
+  cd srn/extensions
+  bash build_ext.sh
   ```
 
 3. Download our trained model from [GoogleDrive](https://drive.google.com/open?id=1T4Qt99SdM7c8G4ZuC1igensY0bZdEETF) or [BaiduYun](https://pan.baidu.com/s/1ambmu1Bu6Oi7zTcEnigFyg) with extraction code `6fba`, and put it into the folder `$SRN_ROOT/model`.

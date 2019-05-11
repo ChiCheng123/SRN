@@ -1,5 +1,4 @@
 data/
-model/
 *.pth
 *.pk
 *.model
