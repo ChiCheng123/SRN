@@ -1,4 +1,4 @@
-﻿# Selective Refinement Network for High Performance Face Detection
+# Selective Refinement Network for High Performance Face Detection
 
 By [Cheng Chi](https://chicheng123.github.io/) and [Shifeng Zhang](http://www.cbsr.ia.ac.cn/users/sfzhang/)
 
