@@ -43,7 +43,7 @@ For more details, please refer to our [paper](https://arxiv.org/abs/1809.02693).
   ```
 
 ### Evaluation
-Evaluate our model on WIDER FACE. We also integrate the [eval tool] (http://shuoyang1213.me/WIDERFACE/index.html) of WIDER FACE. You can evaluate our model and get the final result with only one shell script. 
+Evaluate our model on WIDER FACE. We also integrate the [eval tool](http://shuoyang1213.me/WIDERFACE/index.html) of WIDER FACE. You can evaluate our model and get the final result with only one shell script. 
   ```Shell
   cd $SRN_ROOT/tools
   sh val.sh
