@@ -1,0 +1,29 @@
+{
+    "shared": {
+        "anchor_scales": [2, 2.828427],
+        "anchor_ratios": [1.25],
+        "anchor_stride": 4,
+        "bbox_normalize_stats_precomputed": true,
+        "bbox_normalize_stds": [0.1, 0.1, 0.2, 0.2],
+        "bbox_normalize_means": [0, 0, 0, 0],
+        "color_image": true,
+        "num_classes": 1,
+        "class_names":["__background__", "face"],
+        "allowed_border": 0,
+        "interpolation": "bilinear",
+        "cls_loss_type": "sigmoid_focal_loss",
+        "alpha": 0.25,
+        "gamma": 2.0,
+        "init_prior": 0.01,
+        "multi_cls_levels": [0, 1, 2],
+        "multi_reg_levels": [3, 4, 5]
+    },
+    "test_rpn_proposal_cfg": {
+        "score_thresh": 0.05,
+        "top_n_per_level": 6000,
+        "top_n": 750,
+        "nms_iou_thresh": 0.4,
+        "multi_scale_test": true,
+        "nms_mode": "nms"
+    }
+}
