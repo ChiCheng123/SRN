@@ -52,7 +52,7 @@ def compute_rpn_proposals(conv_cls_fs, conv_loc_fs, conv_cls_ss, conv_loc_ss,
         if multi_cls:
             ka_ix = np.intersect1d(ka_ix_fs, ka_ix_ss)
         else:
-            ka_ix = np.arange(anchors_overplane.shape[0])
+            ka_ix = ka_ix_ss
         cls_ix = np.zeros_like(ka_ix)
 
         if ka_ix.size == 0:
