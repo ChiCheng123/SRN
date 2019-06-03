@@ -6,6 +6,7 @@
         "num_classes": 1,
         "interpolation": "bilinear",
         "cls_loss_type": "sigmoid_focal_loss",
+        "init_prior": 0.01,
         "multi_cls_levels": [0, 1, 2],
         "multi_reg_levels": [3, 4, 5]
     },
