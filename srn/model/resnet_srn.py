@@ -280,9 +280,9 @@ class ResNetSRN(SRN):
         b, c, H, W = y.size()
         assert(self.interpolation in ['nearest', 'bilinear'])
         if self.interpolation == 'nearest':
-            return F.upsample(x, size=(H,W), mode='nearest') + y
+            return F.interpolate(x, size=(H,W), mode='nearest', align_corners=True) + y
         else:
-            return F.upsample(x, size=(H,W), mode='bilinear') + y
+            return F.interpolate(x, size=(H,W), mode='bilinear', align_corners=True) + y
 
     def feature_extractor(self, x):
         x = self.conv1(x)
