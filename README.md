@@ -24,6 +24,8 @@ For more details, please refer to our [paper](https://arxiv.org/abs/1809.02693).
 - Numpy
 - OpenCV
 
+NOTE: [It](https://github.com/lquirosd/P2PaLA/issues/11#issuecomment-457933215) is said that NVIDIA RTX GPUs only support CUDA>=10.0. So be careful if you try to run on RTX GPUs.
+
 ### Preparation
 1. Clone the github repository. We will call the directory `$SRN_ROOT`
   ```Shell
