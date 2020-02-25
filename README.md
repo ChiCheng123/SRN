@@ -16,10 +16,11 @@ For more details, please refer to our [paper](https://arxiv.org/abs/1809.02693).
 3. [Evaluation](#evaluation)
 
 ### Requirements
-- Torch == 0.3.1
-- Torchvision == 0.2.1
+- Torch == 1.4.0 (other versions >=1 should also work)
+- Torchvision == 0.2.1 (to install torch-1.4.0+torchvision-0.2.1, please install torchvision==0.2.1 first)
 - Python == 3.6
-- CUDA CuDNN
+- CUDA 10.1 (other versions of CUDA that matches torch>=1 should also works)
+- CuDNN 7.6.5 (other versions of CuDNN that matches torch>=1 should also works)
 - Numpy
 - OpenCV
 
@@ -33,7 +34,7 @@ For more details, please refer to our [paper](https://arxiv.org/abs/1809.02693).
 2. Compile extensions.
   ```Shell
   cd srn/extensions
-  bash build_ext.sh
+  python setup3.py build_ext --inplace
   ```
 
 3. Download our trained model from [GoogleDrive](https://drive.google.com/open?id=1T4Qt99SdM7c8G4ZuC1igensY0bZdEETF) or [BaiduYun](https://pan.baidu.com/s/1ambmu1Bu6Oi7zTcEnigFyg) with extraction code `6fba`, and put it into the folder `$SRN_ROOT/model`.
