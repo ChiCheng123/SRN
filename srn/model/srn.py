@@ -7,7 +7,7 @@ import torch
 import torch.nn.functional as F
 import torch.nn as nn
 import logging
-from srn.extensions import nms
+from srn.extensions.nms.gpu_nms import gpu_nms as nms
 import numpy as np
 
 logger = logging.getLogger('global')
@@ -50,8 +50,8 @@ class SRN(nn.Module):
             rpn_pred_loc_fs = rpn_pred_fs[level][1]
             rpn_pred_cls_ss = rpn_pred_ss[level][0]
             rpn_pred_loc_ss = rpn_pred_ss[level][1]
-            rpn_pred_cls_fs = F.sigmoid(rpn_pred_cls_fs)
-            rpn_pred_cls_ss = F.sigmoid(rpn_pred_cls_ss)
+            rpn_pred_cls_fs = torch.sigmoid(rpn_pred_cls_fs)
+            rpn_pred_cls_ss = torch.sigmoid(rpn_pred_cls_ss)
             cls_flag = True
             reg_flag = True
             if level not in multi_cls_levels:
@@ -75,7 +75,7 @@ class SRN(nn.Module):
                         continue
                     order = bpcs[:, -2].argsort()[::-1]
                     pre_bboxes = bpcs[order, :]
-                    keep_index = nms(torch.from_numpy(pre_bboxes[:, 1:-1]).float().cuda(), iou).numpy()
+                    keep_index = nms(pre_bboxes[:, 1:-1].astype(np.float32), iou)
                     post_bboxes = pre_bboxes[keep_index[:750]]
                     bboxes.append(post_bboxes)
                 bboxes = np.vstack(bboxes)
