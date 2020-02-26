@@ -2,6 +2,8 @@
 
 This module is from https://github.com/huaifeng1993/NMS, modified for SRN+torch1.4.0.
 
+Huge thanks to https://github.com/yhenon/pytorch-retinanet/issues/66#issuecomment-486671704.
+
 ## FAQ
 
 ### Cannot locate `nvcc`, `include` or `lib64`
