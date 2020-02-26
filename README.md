@@ -16,7 +16,7 @@ For more details, please refer to our [paper](https://arxiv.org/abs/1809.02693).
 3. [Evaluation](#evaluation)
 
 ### Requirements
-- Torch == 0.3.1
+- Torch == 0.3.1 (Run SRN with torch>=1: `git checkout nms`)
 - Torchvision == 0.2.1
 - Python == 3.6
 - CUDA CuDNN
